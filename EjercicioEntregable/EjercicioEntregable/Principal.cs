@@ -33,16 +33,9 @@ namespace EjercicioEntregable
                         }
                         NuevaAtencion.FechaAtencion = FechaAtencion;
                         NuevaAtencion.NroAtencion = ListaAtencion.Count() + 1;
-                        Enfermedad EnfermedadOrigen = new Enfermedad();
-                        foreach (var enfermedad in ListaEnefermedades)
-                        {
-                            if (enfermedad.CodigoEnfermedad == CodigoEnfermedad)
-                            {
-                                EnfermedadOrigen = enfermedad;
-                            }
-                        }
+                       
                         ListaAtencion.Add(NuevaAtencion);
-                        return EnfermedadOrigen.CostoAsociado;
+                        return NuevaAtencion.DatosEnfermedad.CostoAsociado;
                        
                     }
                     else
